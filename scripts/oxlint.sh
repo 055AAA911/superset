@@ -33,7 +33,7 @@ js_ts_files=()
 for file in "$@"; do
   # Remove superset-frontend/ prefix if present
   cleaned_file="${file#$frontend_dir/}"
-  
+
   # Only include JS/TS files
   if [[ "$cleaned_file" =~ \.(js|jsx|ts|tsx)$ ]]; then
     js_ts_files+=("$cleaned_file")
